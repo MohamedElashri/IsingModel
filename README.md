@@ -7,6 +7,10 @@ Author: Mohamed Elashri
 
 Email: elashrmr@mail.uc.edu
 
+## Goal 
+
+Apply the MC methods using Metropolis Algorithm to ising model and extract physical paramters (Energy, Specific heat and Magnetization)
+
 ## Algorithm 
   1. Prepare some initial configrations of N spins. 
   2. Flip spin of a lattice site chosen randomly 
@@ -57,6 +61,14 @@ is fundementally same as i-th lattice point denotation above.
 * * * * * * * * 1
 1 2 3 4 5 6 7 8 
 ```
+
+## Results 
+
+These are plots of the physical quantites for different MC steps. 
+
+![250000 steps](./plots/plot1.png)
+![500000 steps](./plots/plot2.png)
+
 
 ## Optimization
 I spent many nights working on this work, most of time I needed to opptimize my code, 
