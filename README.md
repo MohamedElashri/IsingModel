@@ -44,7 +44,7 @@ The expression for the Energy of the total system is (online latex formula)
 
 Periodical strcture means that lattice point at(1,1) is the same as that at(1,9) if the lattice is 5 by 8. more e.g.(1,1)<=>(6,1),
 (2,3)<=>(2,11). A 2D lattice can be any Nx by Ny. The location (x,y) here is another denotion of lattice point that 
-is fundementally same as i-th lattice point denotation above.s
+is fundementally same as i-th lattice point denotation above.
 
 * * * * * * * * 4
 * * * * * * * * 3
