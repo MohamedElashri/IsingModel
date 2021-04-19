@@ -55,10 +55,10 @@ is fundementally same as i-th lattice point denotation above.s
 '''
 I spent many nights working on this work, most of time I needed to opptimize my code, 
 I even tried to move to matlab (last time I used it was like 5 years ago). 
-But I learned a nice thing from my desire to optimize code speed. it is the usage of Numba’s JIT compiler. read more about that here
-I also instead of using multiple nested loops I dragged all these into just one. http://melashri.net/url/b
-Imagine running 50x50 lattice simulation in my older codes for hours (one to ok 6 hours) vs 15 minutes for the currect script. (On my Mac m1 Machine). 
-also I made the code avilable on colab and can be accssed here (without much comments) http://melashri.net/url/c.
+But I learned a nice thing from my desire to optimize code speed. it is the usage of Numba’s JIT compiler. read more about that here [link](http://melashri.net/url/b).
+I also instead of using multiple nested loops I dragged all these into just one.
+Imagine running 50x50 lattice simulation in my older codes for hours (one took 6 hours) vs 15 minutes for the currect script. (On my Mac m1 Machine). 
+also I made the code avilable on colab and can be accssed here (without much comments) [link](http://melashri.net/url/c).
 '''
 
 
