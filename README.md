@@ -74,6 +74,8 @@ is fundementally same as i-th lattice point denotation above.
 These are plots of the physical quantites for different MC steps. 
 
 ![250000 steps](./plots/plot_1.png)
+
+
 ![500000 steps](./plots/plot_2.png)
 
 
