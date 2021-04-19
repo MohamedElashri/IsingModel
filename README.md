@@ -83,7 +83,6 @@ These are plots of the physical quantites for different MC steps.
 You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about double faster.  
 
   <tr>
-    <td class="tg-yw4l">Ising Model</td>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/github/MohamedElashri/IsingModel/blob/main/Ising.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" height = '23px' >
     </a></td>
