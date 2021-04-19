@@ -43,6 +43,9 @@ The expression for the Energy of the total system is
 
 <img align="left" src="https://latex.elashri.xyz/cgi-bin/mimetex.cgi?H%20=%20-%20J%20%5Csum_%7B%20i%20=%200%20%7D%5E%7B%20N-1%20%7D%20%5Csum_%7B%20j%20=%200%20%7D%5E%7B%20N-1%20%7D%20(s_%7Bi,j%7Ds_%7Bi,j+1%7D+s_%7Bi,j%7Ds_%7Bi+1,j%7D)">  
 
+```
+(H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j}) )
+```
 
 
 
