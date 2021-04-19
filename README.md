@@ -27,32 +27,36 @@ Lattice is a periodical structure of points that align one by one. 2D lattice ca
 ```
 
 The points in lattice are called lattice points, neareast lattice points of point ^ are those lattice points denoted by (*) shown in the graph below:
-
+```
 * * *(*)* * * *
 * *(*)^(*)* * *
 * * *(*)* * * *
 * * * * * * * *
-
+```
 Each lattice point is denoted by a number i in the Harmitonian.
 
 The expression for the Energy of the total system is (online latex formula)
 [link](http://melashri.net/url/a) or (H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j}) )
 
+```
 * * * * * * * * 
 * * * * * * * *
 * * * * * * * * <-the i-th lattice point
 * * * * * * * *
 * * * * * * * *
+```
 
 Periodical strcture means that lattice point at(1,1) is the same as that at(1,9) if the lattice is 5 by 8. more e.g.(1,1)<=>(6,1),
 (2,3)<=>(2,11). A 2D lattice can be any Nx by Ny. The location (x,y) here is another denotion of lattice point that 
 is fundementally same as i-th lattice point denotation above.
 
+```
 * * * * * * * * 4
 * * * * * * * * 3
 * * * * * * * * 2
 * * * * * * * * 1
 1 2 3 4 5 6 7 8 
+```
 
 ## Optimization
 I spent many nights working on this work, most of time I needed to opptimize my code, 
