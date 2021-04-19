@@ -19,6 +19,8 @@ Apply the MC methods using Metropolis Algorithm to ising model and extract physi
   5. repeat 2-4. 
   6. calculate Other parameters and plot them 
 
+My code is very well commented with almost every part have comment that explain its function. reading the code should be something easy, just grab a coffee and enjoy. I always hated people who don't write enough comments or worse than that don't write any. This encouraged me to always to write comments with much details as much as possible. 
+
 ## Physical Model
 Lattice is a periodical structure of points that align one by one. 2D lattice can be plotted as: 
 
