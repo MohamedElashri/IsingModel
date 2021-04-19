@@ -79,6 +79,10 @@ These are plots of the physical quantites for different MC steps.
 ![500000 steps](./plots/plot_2.png)
 
 
+## Reproduction  
+You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about double faster.  
+
+
 ## Optimization
 I spent many nights working on this work, most of time I needed to opptimize my code, 
 I even tried to move to matlab (last time I used it was like 5 years ago). 
@@ -110,7 +114,5 @@ python3 -m conda config --add channels conda-forge
 python3 -m  conda install -c numba numba
 ```
 
-## Execusion 
-You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about double faster.  
 
 
