@@ -18,11 +18,13 @@ Email: elashrmr@mail.uc.edu
 ## Physical Model
 Lattice is a periodical structure of points that align one by one. 2D lattice can be plotted as: 
 
+```
 * * * * * * * *   
 * * * * * * * * 
 * * * * * * * *
 * * * * * * * *
 * * * * * * * *
+```
 
 The points in lattice are called lattice points, neareast lattice points of point ^ are those lattice points denoted by (*) shown in the graph below:
 
