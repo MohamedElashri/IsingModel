@@ -2,7 +2,9 @@
 
 ## Project 
 2d Ising model Monte-Carlo Simulation
+
 Author: Mohamed Elashri 
+
 Email: elashrmr@mail.uc.edu
 
 ## Algorithm 
