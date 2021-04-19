@@ -46,14 +46,6 @@ The expression for the Energy of the total system is
 
 
 
-
-
-
-
-```
-(H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j}) )
-```
-
 ```
 * * * * * * * * 
 * * * * * * * *
