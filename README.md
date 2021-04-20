@@ -99,7 +99,7 @@ Imagine running 50x50 lattice simulation in my older codes for hours (one took 6
 also I made the code avilable on colab and can be accssed here (without much comments) [link](http://melashri.net/url/c).
 
 ## Numba on Apple silicon (Mac m1)
- assuming that we are using Python3 version from homebrew not the one comes with OS which we shouldn't work with or try to modify except for Mac OS stuff. This can be done by adding the path to `.bashrc` or `.zshrc` by adding `export PATH="/usr/local/opt/python/libexec/bin:$PATH"` line to the either files.
+Assuming that we are using Python3 version from homebrew not the one comes with OS which we shouldn't work with or try to modify except for Mac OS stuff. This can be done by adding the path to `.bashrc` or `.zshrc` by adding `export PATH="/usr/local/opt/python/libexec/bin:$PATH"` line to the either files.
  
  
 To install Numba on Mac m1 we do the following 
