@@ -87,6 +87,13 @@ You can run the Jupyter Notebook provided on Colab directly or you can download 
     <img src="https://colab.research.google.com/assets/colab-badge.svg" height = '23px' >
     </a></td>
   </tr>
+  
+  To run the script 
+  
+  1. clone the repository 
+   ``` git clone https://github.com/MohamedElashri/IsingModel ```
+  2. run the script 
+   ``` python3 IsingModel.py``` 
 
 
 
