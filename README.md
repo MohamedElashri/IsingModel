@@ -88,6 +88,7 @@ You can run the Jupyter Notebook provided on Colab directly or you can download 
     </a></td>
   </tr>
   
+  
   To run the script 
   
   1. clone the repository 
