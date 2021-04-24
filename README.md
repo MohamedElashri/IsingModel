@@ -93,12 +93,12 @@ You can run the Jupyter Notebook provided on Colab directly or you can download 
   
   1. clone the repository 
   
-   . ``` git clone https://github.com/MohamedElashri/IsingModel ```
+       ``` git clone https://github.com/MohamedElashri/IsingModel ```
    
   2. run the script 
 
 
-   . ``` python3 IsingModel.py``` 
+      ``` python3 IsingModel.py``` 
 
 
 
