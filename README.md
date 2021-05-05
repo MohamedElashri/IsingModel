@@ -9,7 +9,7 @@ Email: elashrmr@mail.uc.edu
 
 ## Goal 
 
-Apply the MC methods using Metropolis Algorithm to ising model and extract physical paramters (Energy, Specific heat and Magnetization)
+Apply the MC methods using Metropolis Algorithm to Ising model and extract physical parameters (Energy, Specific heat and Magnetization)
 
 ## Algorithm 
   1. Prepare some initial configrations of N spins. 
