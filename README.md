@@ -9,7 +9,7 @@ Email: elashrmr@mail.uc.edu
 
 ## Goal 
 
-Apply the MC methods using Metropolis Algorithm to ising model and extract physical paramters (Energy, Specific heat and Magnetization)
+Apply the MC methods using Metropolis Algorithm to Ising model and extract physical parameters (Energy, Specific heat and Magnetization)
 
 ## Algorithm 
   1. Prepare some initial configrations of N spins. 
@@ -76,17 +76,29 @@ is fundementally same as i-th lattice point denotation above.
 These are plots of the physical quantites for different MC steps. 
 
 ![250000 steps](./plots/plot_1.png)
-![500000 steps](./plots/plot_2.png)
+![500000 steps](./plots/plot_2.jpg)
 
 
 ## Reproduction  
-You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about double faster.  
+You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about twice faster.  
 
   <tr>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/github/MohamedElashri/IsingModel/blob/main/Ising.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" height = '23px' >
     </a></td>
   </tr>
+  
+  
+  To run the script 
+  
+  1. clone the repository 
+  
+       ``` git clone https://github.com/MohamedElashri/IsingModel ```
+   
+  2. run the script 
+
+
+      ``` python3 IsingModel.py``` 
 
 
 
@@ -99,7 +111,7 @@ Imagine running 50x50 lattice simulation in my older codes for hours (one took 6
 also I made the code avilable on colab and can be accssed here (without much comments) [link](http://melashri.net/url/c).
 
 ## Numba on Apple silicon (Mac m1)
- assuming that we are using Python3 version from homebrew not the one comes with OS which we shouldn't work with or try to modify except for Mac OS stuff. This can be done by adding the path to `.bashrc` or `.zshrc` by adding `export PATH="/usr/local/opt/python/libexec/bin:$PATH"` line to the either files.
+Assuming that we are using Python3 version from homebrew not the one comes with OS which we shouldn't work with or try to modify except for Mac OS stuff. This can be done by adding the path to `.bashrc` or `.zshrc` by adding `export PATH="/usr/local/opt/python/libexec/bin:$PATH"` line to the either files.
  
  
 To install Numba on Mac m1 we do the following 
