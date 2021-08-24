@@ -77,7 +77,7 @@ from rich.progress import track # we can use amazin rich library to do the same 
 # Define parameters 
 
 B = 0; # Magnetic field strength
-L = 50; # Lattice size (width)
+L = 10; # Lattice size (width)
 s = np.random.choice([1,-1],size=(L,L)) # Begin with random spin sites with values (+1 or -1) for up or down spins. 
 n= 1000 * L**2 # number of MC sweeps 
 Temperature = np.arange(1.6,3.25,0.01) # Initlaize temperature range (the range includes critical temperature) > takes form np.arange(start,stop,step)
@@ -88,14 +88,13 @@ Temperature = np.arange(1.6,3.25,0.01) # Initlaize temperature range (the range 
 Energy of the lattice calculations. 
 The energy here is simply the sum of interactions between spins divided by the total number of spins
 '''
-@jit(nopython=True, cache=True) # wonderful jit optimization compiler in its high performance mode
+@jit(nopython=True, cache=True) #wonderful jit optimization compiler in its high performance mode
 def calcE(s):
-    E = 0
+    E=0
     for i in range(L):
         for j in range(L):
             E += -dE(s,i,j)/2
     return E/L**2
-
 '''
 Calculate the Magnetization of a given configuration
 Magnetization is the sum of all spins divided by the total number of spins
@@ -217,4 +216,4 @@ plt.suptitle("Simulation of 2D Ising Model by Metropolis Algorithm\n" + "Lattice
 
 
 
-plt.show() # function to show the plots
+#plt.show() # function to show the plots
