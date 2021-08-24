@@ -3,6 +3,8 @@
 I'm trying to learn Julia programming lanaguege and it seems like a strong candidate to replace python in my physics and data analysis future projects. 
 This is try to write the same 2D ising model simulation that I developed in python but using juila. In the near future I plan to do a detailed comparison between the two implementations and performance.
 
+The code here is well documentated in details so it can help anyone trying to figure out how things are going.
+
 
 ## How to run 
 
