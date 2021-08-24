@@ -26,8 +26,6 @@ jobs:
       - run: |
              julia -e 'println("Hello, World!")'
              cd Julia
-             Pkg.add("Plots")
-             Pkg.add("ProgressBars")
              julia ising.jl
         shell: bash
 
