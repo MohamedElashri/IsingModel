@@ -23,7 +23,8 @@ jobs:
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
-      - run: julia -e 'println("Hello, World!")'
+      - run: |
+             julia -e 'println("Hello, World!")'
              cd Julia
              julia ising.jl
         shell: bash
