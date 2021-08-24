@@ -24,14 +24,6 @@ jobs:
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
-      - name: Install dependencies
-        run: | 
-             julia -e 'import Pkg; Pkg.add("Plots")' 
-             julia -e 'import Pkg; Pkg.add("ProgressBars")' 
-      - name: Use BusinesDays
-        run: |
-             julia --project -e 'using Plots'  
-             julia --project -e 'using ProgressBars'  
       - name: run ising model code 
       - run: |
              julia -e 'println("Hello, World!")'
