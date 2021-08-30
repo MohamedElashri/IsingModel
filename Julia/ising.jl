@@ -8,9 +8,9 @@ using ProgressBars
 
 # ------------------------------------------------------------------------------
 # To download packages from this scripts directly uncomment the following lines:
-#using Pkg
-#Pkg.add("Plots")
-#Pkg.add("ProgressBars")
+using Pkg
+Pkg.add("Plots")
+Pkg.add("ProgressBars")
 # ------------------------------------------------------------------------------
 
 
