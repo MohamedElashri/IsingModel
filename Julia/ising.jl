@@ -105,9 +105,9 @@ function main()
 # Plotting section 
     gr() # Set the backend to GR
     plot(temps,mz,title = "Magnetization vs Temperature",xlabel = "Temperature",ylabel = "Magnetization",label = "Magnetization") # plot Magnetization vs Temperature
-    savefig("Magnetization.pdf")
+    savefig("plots/Magnetization.pdf")
     plot(temps,en,title = "Energy vs Temperature",xlabel = "Temperature",ylabel = "Energy",label="Energy") # plot Energy vs. Temperature
-    savefig("Energy.pdf")
+    savefig("plots/Energy.pdf")
 end
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 
