@@ -1,0 +1,26 @@
+name: Jupyter to PDF
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**.ipynb'
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - name: Download tex-live recommended stuff  
+      run: |
+           sudo apt-get install texlive-fonts-recommended texlive-fonts-recommended-doc texlive-plain-generic
+    - name: Jupyter Notebooks to PDF
+      uses: MohamedElashri/Jupyter-to-PDF@v1.2
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Pull request with the Convreted markdown files
+        committer: Mohamed Elashri <MohamedElashri@users.noreply.github.com>
+        title: Convert file from .ipynb to .pdf 
+        body: This is an auto-generated PR
+        branch: PDF
