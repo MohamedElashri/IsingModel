@@ -7,6 +7,27 @@ Author: Mohamed Elashri
 
 Email: elashrmr@mail.uc.edu
 
+## 2D Ising Model
+
+The 2D Ising model is a mathematical model that is used to describe the behavior of a two-dimensional system of magnetic particles. The model was first introduced by physicist Wilhelm Lenz in 1920, and subsequently developed by physicist Ernst Ising in 1925. The model has been widely used in the study of phase transitions and critical phenomena in various systems, including ferromagnetic materials, superconductors, and biological systems.
+
+In the 2D Ising model, each magnetic particle is represented by a spin variable, which can take on values of +1 or -1. The spins are arranged on a two-dimensional lattice, and interact with their nearest neighbors via a ferromagnetic interaction. This interaction is described by the Ising Hamiltonian, which has the form:
+
+```math
+H = -J * sum(s[i] * s[j]) $$
+```
+
+where J is the interaction strength, s[i] and s[j] are the spins at lattice sites i and j, and the sum is taken over all pairs of nearest neighbors.
+
+At low temperatures, the spins in the 2D Ising model tend to align with their neighbors, resulting in a ferromagnetic state. At high temperatures, the thermal fluctuations are strong enough to cause the spins to randomly flip, resulting in a paramagnetic state. The transition between these two states is known as the Curie temperature, and is determined by the value of J and the temperature of the system.
+
+The 2D Ising model has been studied extensively using both analytical and numerical methods. Analytical methods include the exact solution of the model in the one-dimensional case, as well as various approximate methods for the two-dimensional case. Numerical methods include Monte Carlo simulations, which allow for the study of large systems at finite temperatures.
+
+One of the most important results of the 2D Ising model is the existence of a phase transition at the Curie temperature. This transition is associated with a change in the symmetry of the system, from a symmetric paramagnetic phase at high temperatures to a spontaneously broken symmetry ferromagnetic phase at low temperatures. The critical exponents associated with this phase transition have been calculated using various methods, and are in good agreement with experimental measurements.
+
+Overall, the 2D Ising model is a powerful and widely used tool for understanding the behavior of magnetic systems and other systems exhibiting phase transitions and critical phenomena.
+
+
 ## Goal 
 
 Apply the MC methods using Metropolis Algorithm to Ising model and extract physical parameters (Energy, Specific heat and Magnetization)
@@ -45,9 +66,11 @@ The expression for the Energy of the total system is
 
 <img align="left" src="https://latex.elashri.xyz/cgi-bin/mimetex.cgi?H%20=%20-%20J%20%5Csum_%7B%20i%20=%200%20%7D%5E%7B%20N-1%20%7D%20%5Csum_%7B%20j%20=%200%20%7D%5E%7B%20N-1%20%7D%20(s_%7Bi,j%7Ds_%7Bi,j+1%7D+s_%7Bi,j%7Ds_%7Bi+1,j%7D)">  
 
+
+```math
+H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j})
 ```
-(H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j}) )
-```
+
 
 
 
