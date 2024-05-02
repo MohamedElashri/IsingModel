@@ -64,6 +64,16 @@ An interactive Jupyter Notebook version of the simulation is also available. You
 
 The simulation generates plots of the physical quantities (energy, magnetization, and specific heat) as a function of temperature. The plots provide insights into the phase transition and critical behavior of the 2D Ising model.
 
+### L = 50x50 , B = 0.1, s= 250000
+![fig1](plots/fig1.png)
+
+### L = 20x20 , B = 0.1, s= 400000
+![fi2](plots/fig2.png)
+
+### L = 20x20 , B = 0.1, s= 4000000
+![fig3](plots/fig3.png)
+
+
 ## Optimization
 
 Significant optimization efforts have been made to improve the performance of the simulation. The use of Numba's JIT compiler has greatly reduced the execution time, allowing for larger lattice sizes and more Monte Carlo sweeps. The code has been optimized to minimize nested loops and leverage vectorized operations.
