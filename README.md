@@ -1,158 +1,97 @@
-# IsingModel
+# 2D Ising Model Monte Carlo Simulation
 
-## Project 
-2d Ising model Monte-Carlo Simulation
+This project implements a Monte Carlo simulation of the 2D Ising model using the Metropolis algorithm. The Ising model is a mathematical model used to study the behavior of ferromagnetic materials and phase transitions.
 
-Author: Mohamed Elashri 
+## Overview
 
-Email: elashrmr@mail.uc.edu
+The 2D Ising model consists of a lattice of spins that can take values of +1 or -1. Each spin interacts with its nearest neighbors, and the system evolves according to the Metropolis algorithm. The simulation computes various physical quantities such as energy, magnetization, and specific heat as a function of temperature.
 
-## 2D Ising Model
-
-The 2D Ising model is a mathematical model that is used to describe the behavior of a two-dimensional system of magnetic particles. The model was first introduced by physicist Wilhelm Lenz in 1920, and subsequently developed by physicist Ernst Ising in 1925. The model has been widely used in the study of phase transitions and critical phenomena in various systems, including ferromagnetic materials, superconductors, and biological systems.
-
-In the 2D Ising model, each magnetic particle is represented by a spin variable, which can take on values of +1 or -1. The spins are arranged on a two-dimensional lattice, and interact with their nearest neighbors via a ferromagnetic interaction. This interaction is described by the Ising Hamiltonian, which has the form:
+The Hamiltonian \( \mathcal{H} \) for the 2D Ising model in the presence of an external magnetic field \( B \) is given by the following expression:
 
 ```math
-H = -J * sum(s[i] * s[j]) $$
+\mathcal{H} = -J \sum_{\langle i, j \rangle} s_i s_j - \mu B \sum_i s_i
 ```
 
-where J is the interaction strength, s[i] and s[j] are the spins at lattice sites i and j, and the sum is taken over all pairs of nearest neighbors.
+Here, \( s_i \) represents the spin at site \( i \), which can take values of +1 or -1. \( J \) is the interaction strength between nearest neighbor spins \( \langle i, j \rangle \), \( \mu \) is the magnetic moment of each spin, and \( B \) is the strength of the external magnetic field. The first sum runs over all nearest neighbor pairs of spins, while the second sum runs over all spins in the lattice.
 
-At low temperatures, the spins in the 2D Ising model tend to align with their neighbors, resulting in a ferromagnetic state. At high temperatures, the thermal fluctuations are strong enough to cause the spins to randomly flip, resulting in a paramagnetic state. The transition between these two states is known as the Curie temperature, and is determined by the value of J and the temperature of the system.
+## Features
 
-The 2D Ising model has been studied extensively using both analytical and numerical methods. Analytical methods include the exact solution of the model in the one-dimensional case, as well as various approximate methods for the two-dimensional case. Numerical methods include Monte Carlo simulations, which allow for the study of large systems at finite temperatures.
+- Implements the Metropolis algorithm for efficient Monte Carlo sampling
+- Utilizes Numba JIT compilation for accelerated performance
+- Computes energy, magnetization, and specific heat of the system
+- Allows customization of lattice size, number of Monte Carlo sweeps, temperature range, and external magnetic field strength
+- Provides visualizations of the computed physical quantities
 
-One of the most important results of the 2D Ising model is the existence of a phase transition at the Curie temperature. This transition is associated with a change in the symmetry of the system, from a symmetric paramagnetic phase at high temperatures to a spontaneously broken symmetry ferromagnetic phase at low temperatures. The critical exponents associated with this phase transition have been calculated using various methods, and are in good agreement with experimental measurements.
+## Dependencies
 
-Overall, the 2D Ising model is a powerful and widely used tool for understanding the behavior of magnetic systems and other systems exhibiting phase transitions and critical phenomena.
+- Python 3.x
+- NumPy
+- Matplotlib
+- Numba
+- tqdm
 
+## Usage
 
-## Goal 
+1. Clone the repository:
+   ```
+   git clone https://github.com/MohamedElashri/IsingModel.git
+   ```
 
-Apply the MC methods using Metropolis Algorithm to Ising model and extract physical parameters (Energy, Specific heat and Magnetization)
+2. Install the required dependencies:
+   ```
+   pip install numpy matplotlib numba tqdm
+   ```
 
-## Algorithm 
-  1. Prepare some initial configrations of N spins. 
-  2. Flip spin of a lattice site chosen randomly 
-  3. Calculate the change in energy due to that 
-  4. If this change is negative, accept such move. If change is positive, accept it with probability exp^{-dE/kT}
-  5. repeat 2-4. 
-  6. calculate Other parameters and plot them 
+3. Run the simulation script:
+   ```
+   python src/IsingModel.py
+   ```
 
-My code is very well commented with almost every part have comment that explain its function. reading the code should be something easy, just grab a coffee and enjoy. I always hated people who don't write enough comments or worse than that don't write any. This encouraged me to always to write comments with much details as much as possible. 
+4. Adjust the simulation parameters in the script as desired:
+   - `L`: Lattice size (width)
+   - `n`: Number of Monte Carlo sweeps
+   - `Temperature`: Temperature range (includes critical temperature)
+   - `B`: Strength of the external magnetic field
+   - `mu`: Magnetic moment of each spin
 
-## Physical Model
-Lattice is a periodical structure of points that align one by one. 2D lattice can be plotted as: 
+## Jupyter Notebook
 
-```
-* * * * * * * *   
-* * * * * * * * 
-* * * * * * * *
-* * * * * * * *
-* * * * * * * *
-```
+An interactive Jupyter Notebook version of the simulation is also available. You can run the notebook on Google Colab by clicking on the following badge:
 
-The points in lattice are called lattice points, neareast lattice points of point ^ are those lattice points denoted by (*) shown in the graph below:
-```
-* * *(*)* * * *
-* *(*)^(*)* * *
-* * *(*)* * * *
-* * * * * * * *
-```
-Each lattice point is denoted by a number i in the Harmitonian.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MohamedElashri/IsingModel/blob/main/Ising.ipynb)
 
-The expression for the Energy of the total system is 
+## Results
 
-
-```math
-H = - J \sum_{ i = 0 }^{ N-1 } \sum_{ j = 0 }^{ N-1 } (s_{i,j}s_{i,j+1}+s_{i,j}s_{i+1,j})
-```
-
-
-
-
-```
-* * * * * * * * 
-* * * * * * * *
-* * * * * * * * <-the i-th lattice point
-* * * * * * * *
-* * * * * * * *
-```
-
-Periodical strcture means that lattice point at(1,1) is the same as that at(1,9) if the lattice is 5 by 8. more e.g.(1,1)<=>(6,1),
-(2,3)<=>(2,11). A 2D lattice can be any Nx by Ny. The location (x,y) here is another denotion of lattice point that 
-is fundementally same as i-th lattice point denotation above.
-
-```
-* * * * * * * * 4
-* * * * * * * * 3
-* * * * * * * * 2
-* * * * * * * * 1
-1 2 3 4 5 6 7 8 
-```
-
-## Results 
-
-These are plots of the physical quantites for different MC steps. 
-
-![250000 steps](./Python/plots/plot_1.png)
-![500000 steps](./Python/plots/plot_2.jpg)
-
-
-## Reproduction  
-You can run the Jupyter Notebook provided on Colab directly or you can download and run locally. Also there is python script that you can run. I'm using Numba cache so that it produces cache folder (specific to machine CPU and configration) so that you will need to produce yours by running it for one time and susequent runs will be about twice faster.  
-
-  <tr>
-    <td class="tg-yw4l"><a href="https://colab.research.google.com/github/MohamedElashri/IsingModel/blob/main/Ising.ipynb">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" height = '23px' >
-    </a></td>
-  </tr>
-  
-  
-  To run the script 
-  
-  1. clone the repository 
-  
-       ``` git clone https://github.com/MohamedElashri/IsingModel ```
-   
-  2. run the script 
-
-
-      ``` python3 IsingModel.py``` 
-
-
+The simulation generates plots of the physical quantities (energy, magnetization, and specific heat) as a function of temperature. The plots provide insights into the phase transition and critical behavior of the 2D Ising model.
 
 ## Optimization
-I spent many nights working on this work, most of time I needed to opptimize my code, 
-I even tried to move to matlab (last time I used it was like 5 years ago). 
-But I learned a nice thing from my desire to optimize code speed. it is the usage of Numba’s JIT compiler. read more about that here [link](http://melashri.net/url/b).
-I also instead of using multiple nested loops I dragged all these into just one.
-Imagine running 50x50 lattice simulation in my older codes for hours (one took 6 hours) vs 15 minutes for the currect script. (On my Mac m1 Machine). 
-also I made the code avilable on colab and can be accssed here (without much comments) [link](http://melashri.net/url/c).
 
-## Numba on Apple silicon (Mac m1)
-Assuming that we are using Python3 version from homebrew not the one comes with OS which we shouldn't work with or try to modify except for Mac OS stuff. This can be done by adding the path to `.bashrc` or `.zshrc` by adding `export PATH="/usr/local/opt/python/libexec/bin:$PATH"` line to the either files.
- 
- 
-To install Numba on Mac m1 we do the following 
+Significant optimization efforts have been made to improve the performance of the simulation. The use of Numba's JIT compiler has greatly reduced the execution time, allowing for larger lattice sizes and more Monte Carlo sweeps. The code has been optimized to minimize nested loops and leverage vectorized operations.
 
-```
-python3 -m pip install  conda 
-```
+## Installation on Apple Silicon (Mac M1)
 
-```
-python3 -m pip install  cytoolz
-```
+To install Numba on a Mac M1 machine, follow these steps:
 
-```
-python3 -m conda config --add channels conda-forge
-```
+1. Ensure you are using the Python 3 version from Homebrew and not the one that comes with the OS. Add the following line to your `.bashrc` or `.zshrc` file:
+   ```
+   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+   ```
 
+2. Install the required packages:
+   ```
+   python3 -m pip install conda
+   python3 -m pip install cytoolz
+   python3 -m conda config --add channels conda-forge
+   python3 -m conda install -c numba numba
+   ```
 
-```
-python3 -m  conda install -c numba numba
-```
+## License
 
+This project is licensed under the [MIT License](LICENSE).
 
+## Acknowledgments
 
+- The Ising model implementation is based on the work of Wilhelm Lenz and Ernst Ising.
+- The Metropolis algorithm is a widely used Monte Carlo method for simulating physical systems.
+
+Feel free to customize and expand upon this README file to include any additional information or sections relevant to your project.
