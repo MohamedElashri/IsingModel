@@ -6,13 +6,13 @@ This project implements a Monte Carlo simulation of the 2D Ising model using the
 
 The 2D Ising model consists of a lattice of spins that can take values of +1 or -1. Each spin interacts with its nearest neighbors, and the system evolves according to the Metropolis algorithm. The simulation computes various physical quantities such as energy, magnetization, and specific heat as a function of temperature.
 
-The Hamiltonian \( \mathcal{H} \) for the 2D Ising model in the presence of an external magnetic field \( B \) is given by the following expression:
+The Hamiltonian $\mathcal{H}$ for the 2D Ising model in the presence of an external magnetic field  $B$ is given by the following expression:
 
 ```math
 \mathcal{H} = -J \sum_{\langle i, j \rangle} s_i s_j - \mu B \sum_i s_i
 ```
 
-Here, \( s_i \) represents the spin at site \( i \), which can take values of +1 or -1. \( J \) is the interaction strength between nearest neighbor spins \( \langle i, j \rangle \), \( \mu \) is the magnetic moment of each spin, and \( B \) is the strength of the external magnetic field. The first sum runs over all nearest neighbor pairs of spins, while the second sum runs over all spins in the lattice.
+Here, $s_i$ represents the spin at site $i$, which can take values of `+1` or `-1`. $J$ is the interaction strength between nearest neighbor spins $\langle i, j \rangle$,  $\mu$ is the magnetic moment of each spin, and $B$ is the strength of the external magnetic field. The first sum runs over all nearest neighbor pairs of spins, while the second sum runs over all spins in the lattice.
 
 ## Features
 
