@@ -103,5 +103,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 - The Ising model implementation is based on the work of Wilhelm Lenz and Ernst Ising.
 - The Metropolis algorithm is a widely used Monte Carlo method for simulating physical systems.
-
-Feel free to customize and expand upon this README file to include any additional information or sections relevant to your project.
